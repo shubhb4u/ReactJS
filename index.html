@@ -4,9 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <title>Document</title>
 </head>
 <body>
+    <div id="root">Hello</div>
+    <script type="text/babel">
+
+        // Creating an element by using DOM - 
+        //let ele = document.createElement("h1");
+        //Insert a test inside the above h1 tag.
+        //ele.innerText = "hello";
+        //Now insert this element inside root div -
+        //let root= document.getElementById("root");
+        //console.log(ele);
+        //root.appendChild(ele); 
+
+        //Using React - 
+
+
+        //let ele = React.createElement("h1",{
+          //  children : ["Hello", "Hi"]
+        //})
+        //console.log(ele);
+        //const root = ReactDOM.createRoot(document.getElementById("root"));
+        // Instead of append child -
+        //root.render(ele); 
+
+        //jsx 
+        function Myh1(){
+            return (  //jsx starts 
+                <h1>Hello</h1>
+            )
+        }
+
+        function Myh2() {
+            return (  //jsx starts 
+                <h1>Hey</h1>
+            )
+        }
+
+        function Parent() {
+            return (  //jsx starts 
+            <div>
+                <h1>Hey</h1>
+                <h1>Hello</h1>
+            </div>
+            )
+        }
+
+        root.render(<Myh1 />);
+        // root.render(<Myh1 />);
+        // root.render(<Myh1 />);
+        root.render(<Myh2 />);
+
+        //Now we can display both hey and hello components in 1 root only.
+        root.render(<Parent />);
+        // root.render(<WelcomeMsg/>);
+
+    </script>
     
 </body>
+
 </html>
