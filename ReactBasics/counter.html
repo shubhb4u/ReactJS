@@ -37,6 +37,12 @@
             }
         }
 
+        handleReset=()=>{
+            this.setState({
+                count: 0 
+            })
+        }
+
         render(){
 
             return(
@@ -44,6 +50,8 @@
                     <button onClick = {this.handleIncrement}>+</button>
                     <h1>{this.state.count}</h1>
                     <button onClick = {this.handleDecrement}>-</button>
+                    <button onClick={this.handleReset}>Reset</button>
+
                 </React.Fragment>
             )
         }
